@@ -40,13 +40,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_SignPressed(View view) {
-        if (!result.getText().toString().contains("-")) {
-            result.setText(String.valueOf("-" + result.getText()));
-            length = 11;
-        }
-        else {
+        if (result.getText().toString().indexOf("-") == 0) {
             result.setText(String.valueOf(result.getText().toString().substring(1)));
             length = 10;
+        }
+        else {
+            result.setText(String.valueOf("-" + result.getText()));
+            length = 11;
         }
     }
 
@@ -89,27 +89,27 @@ public class MainActivity extends AppCompatActivity {
 
         if (operationPressed) {
 
-                d_valOne = Double.parseDouble(valOne);
-                d_valTwo = Double.parseDouble(valTwo);
+            d_valOne = Double.parseDouble(valOne);
+            d_valTwo = Double.parseDouble(valTwo);
 
-                if (operation.equals("/"))
-                    d_result = (d_valOne / d_valTwo);
-                else if (operation.equals("*"))
-                    d_result = (d_valOne * d_valTwo);
-                else if (operation.equals("-"))
-                    d_result = (d_valOne - d_valTwo);
-                else if (operation.equals("+"))
-                    d_result = (d_valOne + d_valTwo);
+            if (operation.equals("/"))
+                d_result = (d_valOne / d_valTwo);
+            else if (operation.equals("*"))
+                d_result = (d_valOne * d_valTwo);
+            else if (operation.equals("-"))
+                d_result = (d_valOne - d_valTwo);
+            else if (operation.equals("+"))
+                d_result = (d_valOne + d_valTwo);
 
             if (Double.toString(d_result).substring(Double.toString(d_result).length() - 2).equals(".0")) {
                 if (Double.toString(d_result).length() > 10)
-                    result.setText(String.format("%11.3E", d_result));
+                    result.setText(String.format("%11.3E", d_result).replaceAll(" ", ""));
                 else
                     result.setText(String.valueOf((int) d_result));
             }
             else {
                 if (Double.toString(d_result).length() > 10)
-                    result.setText(String.format("%11.3E", d_result));
+                    result.setText(String.format("%11.3E", d_result).replaceAll(" ", ""));
                 else
                     result.setText(String.valueOf(d_result));
             }
