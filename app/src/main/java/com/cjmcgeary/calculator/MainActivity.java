@@ -51,7 +51,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_PercentPressed(View view) {
-
+        operation = "%";
+        operationPressed = true;
+        valOne = result.getText().toString();
+        result.setText("0");
     }
 
 
@@ -100,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
                 d_result = (d_valOne - d_valTwo);
             else if (operation.equals("+"))
                 d_result = (d_valOne + d_valTwo);
+            else if (operation.equals("%"))
+                d_result = (d_valOne % d_valTwo);
 
             if (Double.toString(d_result).substring(Double.toString(d_result).length() - 2).equals(".0")) {
                 if (Double.toString(d_result).length() > 10)
