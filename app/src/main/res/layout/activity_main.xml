@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cjmcgeary.calculator.MainActivity"
+    android:orientation="vertical"
+    android:background="@color/colorResultBar">
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/result_text"
+        android:textSize="64sp"
+        android:gravity="bottom|end"
+        android:background="@color/colorResultBar"
+        android:textColor="@color/colorTextWhite">
+    </TextView>
+
+    <!-- First row: -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40pt">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight=".25"
+            android:layout_height="match_parent"
+            android:background="@color/colorButtonPrimary"
+            android:text="AC"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="35sp"
+            android:onClick="btn_ACPressed"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="+/-"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_SignPressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="%"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_PercentPressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="\u00F7"
+            android:textSize="35sp"
+            android:background="@color/colorButtonAccent"
+            android:textColor="@color/colorTextWhite"
+            android:onClick="btn_DividePressed" />
+    </LinearLayout>
+
+    <!-- Second row: -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40pt">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="7"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_SevenPressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="8"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_EightPressed" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:background="@color/colorButtonPrimary"
+            android:text="9"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="35sp"
+            android:onClick="btn_NinePressed" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="\u00D7"
+            android:textSize="35sp"
+            android:background="@color/colorButtonAccent"
+            android:textColor="@color/colorTextWhite"
+            android:onClick="btn_MultiplyPressed" />
+    </LinearLayout>
+
+    <!-- Third row: -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40pt">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="4"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_FourPressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="5"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_FivePressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="6"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_SixPressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="-"
+            android:textSize="35sp"
+            android:background="@color/colorButtonAccent"
+            android:textColor="@color/colorTextWhite"
+            android:onClick="btn_SubtractPressed" />
+    </LinearLayout>
+
+    <!-- Fourth row: -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40pt">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="1"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_OnePressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="2"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_TwoPressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="3"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_ThreePressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="+"
+            android:textSize="35sp"
+            android:background="@color/colorButtonAccent"
+            android:textColor="@color/colorTextWhite"
+            android:onClick="btn_AddPressed" />
+    </LinearLayout>
+
+    <!-- Fifth row: -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40pt">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".50"
+            android:text="0"
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_ZeroPressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="."
+            android:textSize="35sp"
+            android:background="@color/colorButtonPrimary"
+            android:textColor="@color/colorTextBlack"
+            android:onClick="btn_DecimalPressed" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".25"
+            android:text="="
+            android:textSize="35sp"
+            android:background="@color/colorButtonAccent"
+            android:textColor="@color/colorTextWhite"
+            android:onClick="btn_EqualsPressed" />
+    </LinearLayout>
+
+</LinearLayout>
