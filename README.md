@@ -10,4 +10,7 @@ An app made for my object oriented class.
 6. Select a directory for the project to be created and add a name.
 7. Click `Clone`
 8. When prompted to open the project, click `Yes`
-9. In the top toolbar, select `Run > Run 'app'` to ensure the project is working correctly
+
+## How to test the application
+1. In the top toolbar, select `Run > Run 'app'`
+2. In the pop-up window, select the targeted device `Nexus 5X` and click `OK`
